@@ -63,6 +63,7 @@ input{
     border: 1px solid var(--Grey);
     border-radius: 8px;
     margin: 10px 0 20px 0;
+    text-indent: 25px;
 }
 
 input::placeholder{
@@ -79,10 +80,64 @@ button{
     border-radius: 8px;
     cursor: pointer;
 }
-button:hover{
+#buttonIndex:hover{
     background: linear-gradient(to right, #E90064 10%, hsl(4, 100%, 67%) 50%);
 
 }
 .mainRight{
     margin: 25px 25px 20px 0;
+}
+
+#mainSuccess{
+    display: none;
+    height: 500px;
+    width: 480px;
+    background-color: var(--White);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 22px;
+    text-align: center;
+}
+.successText{
+    display: flex;
+    flex-direction: column;
+    margin: 50px 55px 0 55px;
+    gap: 30px;
+    width: 400px;
+    text-align: left;
+}
+.successText h1{
+    font-size: 3rem;
+}
+.successText img{
+    width: 12%;
+}
+.successText p{
+    max-width: 360px;
+}
+#alert{
+    display: none;
+    color: #E90064;
+    margin: 10px 40px 0 0;
+    text-align: right;
+}
+
+@media (max-width: 940px){
+    #main{
+        display: flex;
+        flex-direction: column-reverse;
+    }
+   .mainLeft{
+        font-size: .8rem;
+   }
+   .mainLeft{
+    margin-bottom: 2rem;
+   }
+  .mainRight img{
+    margin-left: 1.2rem;
+    width: 498px;
+  }
+
 }
